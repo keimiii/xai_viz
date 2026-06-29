@@ -30,7 +30,7 @@ uv sync
 Download precomputed artifacts (dataset, cache, checkpoints) from the [Google Drive artifact folder](https://drive.google.com/drive/folders/1pT8VrK6d9h-sZzAr6qhPxvNrVrRi-8Cd?usp=sharing), then copy into the repo root:
 
 ```bash
-rsync -av dataset outputs /path/to/xai_viz/
+rsync -av dataset outputs /path/to/ssl_wikichurches/
 ```
 
 Expected structure after copying:
@@ -138,4 +138,3 @@ cd app/frontend && npm run lint && npm run build
 If you use this code or dataset, please cite the WikiChurches dataset:
 
 Barz, B., & Denzler, J. (2021). WikiChurches: A Fine-Grained Dataset of Architectural Styles with Real-World Challenges. *NeurIPS Datasets and Benchmarks Track*. [arXiv:2108.06959](https://arxiv.org/abs/2108.06959)
-# xai_viz

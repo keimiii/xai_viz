@@ -1,0 +1,56 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: app/backend/Dockerfile
+    container_name: ssl-attention-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      # Mount dataset and cache for development
+      - ./dataset:/app/dataset:ro
+      - ./outputs:/app/outputs
+    environment:
+      - SSL_DATASET_PATH=/app/dataset
+      - SSL_CACHE_PATH=/app/outputs/cache
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  frontend:
+    build:
+      context: ./app/frontend
+      dockerfile: Dockerfile
+    container_name: ssl-attention-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+
+# For development with hot reload
+  backend-dev:
+    build:
+      context: .
+      dockerfile: app/backend/Dockerfile
+    container_name: ssl-attention-backend-dev
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./src:/app/src
+      - ./app:/app/app
+      - ./dataset:/app/dataset:ro
+      - ./outputs:/app/outputs
+    environment:
+      - SSL_DATASET_PATH=/app/dataset
+      - SSL_CACHE_PATH=/app/outputs/cache
+    command: ["uvicorn", "app.backend.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+    profiles:
+      - dev
+
+networks:
+  default:
+    name: ssl-attention-network

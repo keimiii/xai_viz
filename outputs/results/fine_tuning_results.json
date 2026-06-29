@@ -1,0 +1,60 @@
+[
+  {
+    "model_name": "siglip",
+    "strategy_id": "full",
+    "best_val_acc": 0.88,
+    "best_epoch": 2,
+    "train_history": [
+      {
+        "epoch": 1,
+        "train_loss": 1.0113391928706048,
+        "train_acc": 0.6061464690496948,
+        "val_loss": 0.4723103406429291,
+        "val_acc": 0.864,
+        "lr": 8.43011598607912e-06
+      },
+      {
+        "epoch": 2,
+        "train_loss": 0.6832926401701198,
+        "train_acc": 0.7432432432432432,
+        "val_loss": 0.9092496221065521,
+        "val_acc": 0.88,
+        "lr": 3.018911906349896e-06
+      },
+      {
+        "epoch": 3,
+        "train_loss": 0.45193591339752376,
+        "train_acc": 0.8206190061028771,
+        "val_loss": 1.0574998298287392,
+        "val_acc": 0.864,
+        "lr": 0.0
+      }
+    ],
+    "checkpoint_path": "/Users/desmondchoy/Projects/ssl_wikichurches/outputs/checkpoints/siglip_full_finetuned.pt",
+    "manifest_path": "/Users/desmondchoy/Projects/ssl_wikichurches/outputs/results/fine_tuning_manifests/siglip_full_manifest.json",
+    "num_train_samples": 4588,
+    "num_val_samples": 125,
+    "num_excluded_eval_samples": 125,
+    "config": {
+      "model_name": "siglip",
+      "num_epochs": 3,
+      "batch_size": 16,
+      "learning_rate_backbone": 1e-05,
+      "learning_rate_head": 0.001,
+      "weight_decay": 0.01,
+      "freeze_backbone": false,
+      "val_split": 0.2,
+      "exclude_annotated_eval": true,
+      "val_on_annotated_eval": true,
+      "seed": 42,
+      "warmup_ratio": 0.1,
+      "max_grad_norm": 1.0,
+      "use_augmentation": true,
+      "use_lora": false,
+      "lora_rank": 8,
+      "lora_alpha": 32,
+      "lora_dropout": 0.1,
+      "lora_target_modules": null
+    }
+  }
+]

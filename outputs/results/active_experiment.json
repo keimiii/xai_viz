@@ -1,0 +1,9 @@
+{
+  "experiment_id": "fine_tuning_primary_20260327",
+  "updated_at": "2026-03-27T23:44:47.750968+00:00",
+  "split_id": "fine_tuning_primary_20260327__primary__seed42",
+  "run_matrix_path": "outputs/results/experiments/fine_tuning_primary_20260327/run_matrix.json",
+  "fine_tuning_results_path": "outputs/results/experiments/fine_tuning_primary_20260327/fine_tuning_results.json",
+  "q2_metrics_path": "outputs/results/experiments/fine_tuning_primary_20260327/q2_metrics_analysis.json",
+  "q2_delta_iou_path": "outputs/results/experiments/fine_tuning_primary_20260327/q2_delta_iou_analysis.json"
+}

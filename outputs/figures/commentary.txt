@@ -1,0 +1,28 @@
+# Run Matrix Figure Commentary
+
+## 01 Validation Accuracy
+Best: DINOv2 Full (77.5%). Worst: MAE Linear Probe (49.8%). MAE consistently lags; DINOv3 LoRA leads. Full fine-tuning does not always beat LoRA on classification accuracy. The practical takeaway is that stronger adaptation helps, but lightweight LoRA often captures most of the downstream gain without needing full backbone updates.
+
+## 02 Delta Heatmap Grid
+All deltas normalized to improvement direction: positive (blue) = better, negative (red) = worse. For MSE/KL/EMD the sign is flipped so blue still means the metric decreased (improved). Linear probe near-zero confirms frozen backbones don't shift attention. SigLIP shows the most significant improvements. Read the blue clusters less as "every metric moved" and more as "this model genuinely reallocated attention in a better direction across multiple views."
+
+## 03 Diverging Bars
+Bars sorted by delta (largest improvement at top). Colors represent models, making it easy to spot which models consistently rank high or low. Linear probe omitted (all near zero). SigLIP entries cluster near the top across most metrics. The ranking makes the model hierarchy easier to trust: improvement is not evenly distributed, and CLIP/SigLIP benefit much more than the DINO family here.
+
+## 04 IoU Percentile Slopes
+Slopes reveal how fine-tuning affects top-k attention alignment at different thresholds. Steeper slopes at high percentiles indicate that fine-tuning particularly shifts the most-attended regions. Flat slopes near zero confirm linear probe has no effect (omitted). The interesting pattern is that gains are often strongest where attention is most concentrated, which suggests sharpening around diagnostic parts rather than a uniform boost everywhere.
+
+## 05 Radar Profiles
+Radar charts show each model's metric profile normalized globally. Outward = better for all axes (lower-is-better metrics are inverted). Frozen baseline in gray; fine-tuned strategies overlaid. Models where the colored polygon expands beyond gray show genuine improvement. Use this chart to judge breadth, not raw size: outward expansion across several axes means the gain is multi-metric rather than a single-metric artifact.
+
+## 06 Accuracy vs Attention
+Each panel shows one model's trajectory from Linear Probe (square) through LoRA (diamond) to Full (circle). Shared x-axis enables accuracy comparison, while panel-specific y-axes keep small IoU changes legible. Points above the dashed y=0 line improved attention alignment. Models like CLIP/SigLIP show clear upward trajectories; DINOv2/DINOv3 stay flat. The main read is that better classification and more expert-like attention often travel together, but not tightly enough to treat one as a substitute for the other.
+
+## 07 Preserve / Enhance / Destroy
+Across all 6 metrics: 46 Enhance, 16 Preserve, 10 Destroy (out of 72 model-strategy-metric combinations). Linear Probe omitted (frozen backbone = always Preserve). The encouraging part is that improvement is the dominant outcome; the caution is that regressions are still common enough that strategy choice matters.
+
+## 08 Forest Plot with CIs
+Forest plot with 95% bootstrap CIs for LoRA and Full across all 6 metrics. 62 of 72 displayed CIs exclude zero, and 56 of 72 rows remain significant after Holm correction. Sign flipped for lower-is-better metrics so rightward always means improvement. This is the clearest "signal vs noise" figure: when CLIP and SigLIP sit clearly to the right of zero across multiple panels, the improvement looks robust rather than anecdotal.
+
+## 09 Per-Image Delta Strips
+Strip plot showing all 139 per-image deltas for Full fine-tuning. Diamond = mean, thick bar = 95% bootstrap CI. Jittered dots reveal whether improvement is consistent across images or driven by outliers. This figure is useful for spotting unevenness: strong mean gains are more convincing when most dots lean positive, but the negative tails remind us that some images still regress.

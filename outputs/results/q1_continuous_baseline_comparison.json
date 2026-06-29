@@ -1,0 +1,643 @@
+{
+  "baseline_source": {
+    "kind": "documented_constants",
+    "lower_is_better": true,
+    "source_doc": "docs/reference/metrics_methodology.md"
+  },
+  "baselines": {
+    "center_gaussian": {
+      "emd": 0.2836,
+      "kl": 2.6317,
+      "mse": 0.177
+    },
+    "random": {
+      "emd": 0.3468,
+      "kl": 3.3627,
+      "mse": 0.3192
+    },
+    "saliency_prior": {
+      "emd": 0.2654,
+      "kl": 2.6111,
+      "mse": 0.0957
+    },
+    "sobel_edge": {
+      "emd": 0.3137,
+      "kl": 3.2237,
+      "mse": 0.0376
+    }
+  },
+  "cross_metric_findings": [
+    {
+      "model": "dinov2",
+      "summary": "dinov2 beats all four baselines on MSE but has a weaker distribution-level story: KL beats Random, Sobel Edge; EMD beats Random, Sobel Edge.",
+      "type": "mse_vs_distribution_gap"
+    },
+    {
+      "model": "dinov3",
+      "summary": "dinov3 beats all four baselines on MSE, KL, and EMD at its best default-method layer.",
+      "type": "consistent_strength"
+    },
+    {
+      "model": "mae",
+      "summary": "mae shows a cross-metric spread: MSE beats Random, Center Gaussian, Saliency Prior but emd beats random.",
+      "type": "strongest_vs_weakest_conflict"
+    },
+    {
+      "model": "clip",
+      "summary": "clip beats all four baselines on MSE but has a weaker distribution-level story: KL beats Random, Sobel Edge; EMD beats Random.",
+      "type": "mse_vs_distribution_gap"
+    },
+    {
+      "model": "siglip",
+      "summary": "siglip beats all four baselines on MSE but has a weaker distribution-level story: KL beats Random, Sobel Edge; EMD beats no baselines.",
+      "type": "mse_vs_distribution_gap"
+    },
+    {
+      "model": "siglip",
+      "summary": "siglip falls below the random baseline on EMD even though its strongest metric is MSE.",
+      "type": "worse_than_random_cross_metric"
+    },
+    {
+      "model": "siglip2",
+      "summary": "siglip2 beats all four baselines on MSE but has a weaker distribution-level story: KL beats Random, Sobel Edge; EMD beats no baselines.",
+      "type": "mse_vs_distribution_gap"
+    },
+    {
+      "model": "siglip2",
+      "summary": "siglip2 falls below the random baseline on EMD even though its strongest metric is MSE.",
+      "type": "worse_than_random_cross_metric"
+    },
+    {
+      "model": "resnet50",
+      "summary": "resnet50 beats all four baselines on MSE but has a weaker distribution-level story: KL beats Random, Sobel Edge; EMD beats Random, Sobel Edge.",
+      "type": "mse_vs_distribution_gap"
+    }
+  ],
+  "generated_at": "2026-05-16T09:04:10.972716+00:00",
+  "headline_findings": [
+    {
+      "metric": "mse",
+      "models": [
+        "siglip2",
+        "siglip",
+        "dinov2",
+        "clip",
+        "resnet50",
+        "dinov3"
+      ],
+      "summary": "MSE: siglip2, siglip, dinov2, clip, resnet50, dinov3 beat all four baselines.",
+      "type": "metric_clearance"
+    },
+    {
+      "metric": "mse",
+      "models": [],
+      "summary": "MSE: no models score worse than the random baseline.",
+      "type": "metric_worse_than_random"
+    },
+    {
+      "metric": "kl",
+      "models": [
+        "dinov3"
+      ],
+      "summary": "KL: dinov3 beat all four baselines.",
+      "type": "metric_clearance"
+    },
+    {
+      "metric": "kl",
+      "models": [],
+      "summary": "KL: no models score worse than the random baseline.",
+      "type": "metric_worse_than_random"
+    },
+    {
+      "metric": "emd",
+      "models": [
+        "dinov3"
+      ],
+      "summary": "EMD: dinov3 beat all four baselines.",
+      "type": "metric_clearance"
+    },
+    {
+      "metric": "emd",
+      "models": [
+        "siglip",
+        "siglip2"
+      ],
+      "summary": "EMD: siglip, siglip2 score worse than the random baseline.",
+      "type": "metric_worse_than_random"
+    },
+    {
+      "models": [
+        "dinov3"
+      ],
+      "summary": "Across MSE, KL, and EMD: dinov3 beat all four baselines on every continuous metric.",
+      "type": "all_metric_clearance"
+    }
+  ],
+  "models": {
+    "clip": {
+      "metrics": {
+        "emd": {
+          "beats_all_baselines": false,
+          "best_layer": "layer0",
+          "method_used": "cls",
+          "passed_baseline_count": 1,
+          "passed_baselines": [
+            "random"
+          ],
+          "passes_baselines": {
+            "center_gaussian": false,
+            "random": true,
+            "saliency_prior": false,
+            "sobel_edge": false
+          },
+          "rank": 5,
+          "score": 0.3261260986328125,
+          "surprises": [
+            "beats_only_random"
+          ]
+        },
+        "kl": {
+          "beats_all_baselines": false,
+          "best_layer": "layer0",
+          "method_used": "cls",
+          "passed_baseline_count": 2,
+          "passed_baselines": [
+            "random",
+            "sobel_edge"
+          ],
+          "passes_baselines": {
+            "center_gaussian": false,
+            "random": true,
+            "saliency_prior": false,
+            "sobel_edge": true
+          },
+          "rank": 5,
+          "score": 2.912217140197754,
+          "surprises": [
+            "beats_random_but_not_stronger_priors"
+          ]
+        },
+        "mse": {
+          "beats_all_baselines": true,
+          "best_layer": "layer6",
+          "method_used": "cls",
+          "passed_baseline_count": 4,
+          "passed_baselines": [
+            "random",
+            "center_gaussian",
+            "saliency_prior",
+            "sobel_edge"
+          ],
+          "passes_baselines": {
+            "center_gaussian": true,
+            "random": true,
+            "saliency_prior": true,
+            "sobel_edge": true
+          },
+          "rank": 4,
+          "score": 0.02107115276157856,
+          "surprises": [
+            "beats_all_baselines"
+          ]
+        }
+      },
+      "model": "clip"
+    },
+    "dinov2": {
+      "metrics": {
+        "emd": {
+          "beats_all_baselines": false,
+          "best_layer": "layer11",
+          "method_used": "cls",
+          "passed_baseline_count": 2,
+          "passed_baselines": [
+            "random",
+            "sobel_edge"
+          ],
+          "passes_baselines": {
+            "center_gaussian": false,
+            "random": true,
+            "saliency_prior": false,
+            "sobel_edge": true
+          },
+          "rank": 2,
+          "score": 0.2978397607803345,
+          "surprises": [
+            "beats_random_but_not_stronger_priors"
+          ]
+        },
+        "kl": {
+          "beats_all_baselines": false,
+          "best_layer": "layer11",
+          "method_used": "cls",
+          "passed_baseline_count": 2,
+          "passed_baselines": [
+            "random",
+            "sobel_edge"
+          ],
+          "passes_baselines": {
+            "center_gaussian": false,
+            "random": true,
+            "saliency_prior": false,
+            "sobel_edge": true
+          },
+          "rank": 2,
+          "score": 2.684194326400757,
+          "surprises": [
+            "beats_random_but_not_stronger_priors"
+          ]
+        },
+        "mse": {
+          "beats_all_baselines": true,
+          "best_layer": "layer0",
+          "method_used": "cls",
+          "passed_baseline_count": 4,
+          "passed_baselines": [
+            "random",
+            "center_gaussian",
+            "saliency_prior",
+            "sobel_edge"
+          ],
+          "passes_baselines": {
+            "center_gaussian": true,
+            "random": true,
+            "saliency_prior": true,
+            "sobel_edge": true
+          },
+          "rank": 3,
+          "score": 0.020865488797426224,
+          "surprises": [
+            "beats_all_baselines"
+          ]
+        }
+      },
+      "model": "dinov2"
+    },
+    "dinov3": {
+      "metrics": {
+        "emd": {
+          "beats_all_baselines": true,
+          "best_layer": "layer11",
+          "method_used": "cls",
+          "passed_baseline_count": 4,
+          "passed_baselines": [
+            "random",
+            "center_gaussian",
+            "saliency_prior",
+            "sobel_edge"
+          ],
+          "passes_baselines": {
+            "center_gaussian": true,
+            "random": true,
+            "saliency_prior": true,
+            "sobel_edge": true
+          },
+          "rank": 1,
+          "score": 0.2600095868110657,
+          "surprises": [
+            "beats_all_baselines"
+          ]
+        },
+        "kl": {
+          "beats_all_baselines": true,
+          "best_layer": "layer11",
+          "method_used": "cls",
+          "passed_baseline_count": 4,
+          "passed_baselines": [
+            "random",
+            "center_gaussian",
+            "saliency_prior",
+            "sobel_edge"
+          ],
+          "passes_baselines": {
+            "center_gaussian": true,
+            "random": true,
+            "saliency_prior": true,
+            "sobel_edge": true
+          },
+          "rank": 1,
+          "score": 2.324707508087158,
+          "surprises": [
+            "beats_all_baselines"
+          ]
+        },
+        "mse": {
+          "beats_all_baselines": true,
+          "best_layer": "layer0",
+          "method_used": "cls",
+          "passed_baseline_count": 4,
+          "passed_baselines": [
+            "random",
+            "center_gaussian",
+            "saliency_prior",
+            "sobel_edge"
+          ],
+          "passes_baselines": {
+            "center_gaussian": true,
+            "random": true,
+            "saliency_prior": true,
+            "sobel_edge": true
+          },
+          "rank": 6,
+          "score": 0.027014002203941345,
+          "surprises": [
+            "beats_all_baselines"
+          ]
+        }
+      },
+      "model": "dinov3"
+    },
+    "mae": {
+      "metrics": {
+        "emd": {
+          "beats_all_baselines": false,
+          "best_layer": "layer10",
+          "method_used": "cls",
+          "passed_baseline_count": 1,
+          "passed_baselines": [
+            "random"
+          ],
+          "passes_baselines": {
+            "center_gaussian": false,
+            "random": true,
+            "saliency_prior": false,
+            "sobel_edge": false
+          },
+          "rank": 4,
+          "score": 0.3176763355731964,
+          "surprises": [
+            "beats_only_random"
+          ]
+        },
+        "kl": {
+          "beats_all_baselines": false,
+          "best_layer": "layer10",
+          "method_used": "cls",
+          "passed_baseline_count": 2,
+          "passed_baselines": [
+            "random",
+            "sobel_edge"
+          ],
+          "passes_baselines": {
+            "center_gaussian": false,
+            "random": true,
+            "saliency_prior": false,
+            "sobel_edge": true
+          },
+          "rank": 4,
+          "score": 2.7561964988708496,
+          "surprises": [
+            "beats_random_but_not_stronger_priors"
+          ]
+        },
+        "mse": {
+          "beats_all_baselines": false,
+          "best_layer": "layer3",
+          "method_used": "cls",
+          "passed_baseline_count": 3,
+          "passed_baselines": [
+            "random",
+            "center_gaussian",
+            "saliency_prior"
+          ],
+          "passes_baselines": {
+            "center_gaussian": true,
+            "random": true,
+            "saliency_prior": true,
+            "sobel_edge": false
+          },
+          "rank": 7,
+          "score": 0.048344194889068604,
+          "surprises": [
+            "beats_random_but_not_stronger_priors"
+          ]
+        }
+      },
+      "model": "mae"
+    },
+    "resnet50": {
+      "metrics": {
+        "emd": {
+          "beats_all_baselines": false,
+          "best_layer": "layer3",
+          "method_used": "gradcam",
+          "passed_baseline_count": 2,
+          "passed_baselines": [
+            "random",
+            "sobel_edge"
+          ],
+          "passes_baselines": {
+            "center_gaussian": false,
+            "random": true,
+            "saliency_prior": false,
+            "sobel_edge": true
+          },
+          "rank": 3,
+          "score": 0.3024713397026062,
+          "surprises": [
+            "beats_random_but_not_stronger_priors"
+          ]
+        },
+        "kl": {
+          "beats_all_baselines": false,
+          "best_layer": "layer3",
+          "method_used": "gradcam",
+          "passed_baseline_count": 2,
+          "passed_baselines": [
+            "random",
+            "sobel_edge"
+          ],
+          "passes_baselines": {
+            "center_gaussian": false,
+            "random": true,
+            "saliency_prior": false,
+            "sobel_edge": true
+          },
+          "rank": 3,
+          "score": 2.691671133041382,
+          "surprises": [
+            "beats_random_but_not_stronger_priors"
+          ]
+        },
+        "mse": {
+          "beats_all_baselines": true,
+          "best_layer": "layer2",
+          "method_used": "gradcam",
+          "passed_baseline_count": 4,
+          "passed_baselines": [
+            "random",
+            "center_gaussian",
+            "saliency_prior",
+            "sobel_edge"
+          ],
+          "passes_baselines": {
+            "center_gaussian": true,
+            "random": true,
+            "saliency_prior": true,
+            "sobel_edge": true
+          },
+          "rank": 5,
+          "score": 0.024224812164902687,
+          "surprises": [
+            "beats_all_baselines"
+          ]
+        }
+      },
+      "model": "resnet50"
+    },
+    "siglip": {
+      "metrics": {
+        "emd": {
+          "beats_all_baselines": false,
+          "best_layer": "layer4",
+          "method_used": "mean",
+          "passed_baseline_count": 0,
+          "passed_baselines": [],
+          "passes_baselines": {
+            "center_gaussian": false,
+            "random": false,
+            "saliency_prior": false,
+            "sobel_edge": false
+          },
+          "rank": 6,
+          "score": 0.3476214110851288,
+          "surprises": [
+            "worse_than_random"
+          ]
+        },
+        "kl": {
+          "beats_all_baselines": false,
+          "best_layer": "layer4",
+          "method_used": "mean",
+          "passed_baseline_count": 2,
+          "passed_baselines": [
+            "random",
+            "sobel_edge"
+          ],
+          "passes_baselines": {
+            "center_gaussian": false,
+            "random": true,
+            "saliency_prior": false,
+            "sobel_edge": true
+          },
+          "rank": 6,
+          "score": 3.002044916152954,
+          "surprises": [
+            "beats_random_but_not_stronger_priors"
+          ]
+        },
+        "mse": {
+          "beats_all_baselines": true,
+          "best_layer": "layer6",
+          "method_used": "mean",
+          "passed_baseline_count": 4,
+          "passed_baselines": [
+            "random",
+            "center_gaussian",
+            "saliency_prior",
+            "sobel_edge"
+          ],
+          "passes_baselines": {
+            "center_gaussian": true,
+            "random": true,
+            "saliency_prior": true,
+            "sobel_edge": true
+          },
+          "rank": 2,
+          "score": 0.017548121511936188,
+          "surprises": [
+            "beats_all_baselines"
+          ]
+        }
+      },
+      "model": "siglip"
+    },
+    "siglip2": {
+      "metrics": {
+        "emd": {
+          "beats_all_baselines": false,
+          "best_layer": "layer4",
+          "method_used": "mean",
+          "passed_baseline_count": 0,
+          "passed_baselines": [],
+          "passes_baselines": {
+            "center_gaussian": false,
+            "random": false,
+            "saliency_prior": false,
+            "sobel_edge": false
+          },
+          "rank": 7,
+          "score": 0.3538258373737335,
+          "surprises": [
+            "worse_than_random"
+          ]
+        },
+        "kl": {
+          "beats_all_baselines": false,
+          "best_layer": "layer4",
+          "method_used": "mean",
+          "passed_baseline_count": 2,
+          "passed_baselines": [
+            "random",
+            "sobel_edge"
+          ],
+          "passes_baselines": {
+            "center_gaussian": false,
+            "random": true,
+            "saliency_prior": false,
+            "sobel_edge": true
+          },
+          "rank": 7,
+          "score": 3.071042776107788,
+          "surprises": [
+            "beats_random_but_not_stronger_priors"
+          ]
+        },
+        "mse": {
+          "beats_all_baselines": true,
+          "best_layer": "layer6",
+          "method_used": "mean",
+          "passed_baseline_count": 4,
+          "passed_baselines": [
+            "random",
+            "center_gaussian",
+            "saliency_prior",
+            "sobel_edge"
+          ],
+          "passes_baselines": {
+            "center_gaussian": true,
+            "random": true,
+            "saliency_prior": true,
+            "sobel_edge": true
+          },
+          "rank": 1,
+          "score": 0.017452022060751915,
+          "surprises": [
+            "beats_all_baselines"
+          ]
+        }
+      },
+      "model": "siglip2"
+    }
+  },
+  "scope": {
+    "metrics": [
+      "mse",
+      "kl",
+      "emd"
+    ],
+    "metrics_db_path": "/Users/desmondchoy/Projects/ssl_wikichurches/outputs/cache/metrics.db",
+    "models": [
+      "dinov2",
+      "dinov3",
+      "mae",
+      "clip",
+      "siglip",
+      "siglip2",
+      "resnet50"
+    ],
+    "ranking_mode": "default_method",
+    "score_selection": "best default-method layer per model and metric",
+    "source_table": "aggregate_metrics"
+  }
+}

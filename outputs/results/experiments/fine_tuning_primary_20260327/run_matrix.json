@@ -1,0 +1,368 @@
+{
+  "experiment_id": "fine_tuning_primary_20260327",
+  "selection_rule": "best classification validation accuracy on shared non-annotated validation split",
+  "runs": {
+    "fine_tuning_primary_20260327__clip__linear_probe": {
+      "run_id": "fine_tuning_primary_20260327__clip__linear_probe",
+      "experiment_id": "fine_tuning_primary_20260327",
+      "model": "clip",
+      "strategy": "linear_probe",
+      "split_id": "fine_tuning_primary_20260327__primary__seed42",
+      "checkpoint_path": "outputs/checkpoints/fine_tuning_primary_20260327/clip_linear_probe_finetuned.pt",
+      "selected_epoch": 2,
+      "selection_metric": "classification_validation_accuracy",
+      "checkpoint_selection_split": "random_stratified_excluding_annotated_eval",
+      "best_val_score": 0.6368593238822247,
+      "manifest_path": "outputs/results/experiments/fine_tuning_primary_20260327/manifests/fine_tuning_primary_20260327__clip__linear_probe_manifest.json",
+      "analysis_artifact_paths": {
+        "q2_metrics": "outputs/results/experiments/fine_tuning_primary_20260327/q2_metrics_analysis.json",
+        "q2_delta_iou": "outputs/results/experiments/fine_tuning_primary_20260327/q2_delta_iou_analysis.json"
+      },
+      "run_scope": "primary",
+      "training_git_commit_sha": "46e1d75642c28b9edda6125b68f41535ec6e46f0",
+      "analysis_git_commit_sha": "1ef7d6184a6b5c1beed3c02d6e631f16b12dec73"
+    },
+    "fine_tuning_primary_20260327__dinov2__linear_probe": {
+      "run_id": "fine_tuning_primary_20260327__dinov2__linear_probe",
+      "experiment_id": "fine_tuning_primary_20260327",
+      "model": "dinov2",
+      "strategy": "linear_probe",
+      "split_id": "fine_tuning_primary_20260327__primary__seed42",
+      "checkpoint_path": "outputs/checkpoints/fine_tuning_primary_20260327/dinov2_linear_probe_finetuned.pt",
+      "selected_epoch": 3,
+      "selection_metric": "classification_validation_accuracy",
+      "checkpoint_selection_split": "random_stratified_excluding_annotated_eval",
+      "best_val_score": 0.7480916030534351,
+      "manifest_path": "outputs/results/experiments/fine_tuning_primary_20260327/manifests/fine_tuning_primary_20260327__dinov2__linear_probe_manifest.json",
+      "analysis_artifact_paths": {
+        "q2_metrics": "outputs/results/experiments/fine_tuning_primary_20260327/q2_metrics_analysis.json",
+        "q2_delta_iou": "outputs/results/experiments/fine_tuning_primary_20260327/q2_delta_iou_analysis.json"
+      },
+      "run_scope": "primary",
+      "training_git_commit_sha": "46e1d75642c28b9edda6125b68f41535ec6e46f0",
+      "analysis_git_commit_sha": "1ef7d6184a6b5c1beed3c02d6e631f16b12dec73"
+    },
+    "fine_tuning_primary_20260327__dinov3__linear_probe": {
+      "run_id": "fine_tuning_primary_20260327__dinov3__linear_probe",
+      "experiment_id": "fine_tuning_primary_20260327",
+      "model": "dinov3",
+      "strategy": "linear_probe",
+      "split_id": "fine_tuning_primary_20260327__primary__seed42",
+      "checkpoint_path": "outputs/checkpoints/fine_tuning_primary_20260327/dinov3_linear_probe_finetuned.pt",
+      "selected_epoch": 1,
+      "selection_metric": "classification_validation_accuracy",
+      "checkpoint_selection_split": "random_stratified_excluding_annotated_eval",
+      "best_val_score": 0.7350054525627044,
+      "manifest_path": "outputs/results/experiments/fine_tuning_primary_20260327/manifests/fine_tuning_primary_20260327__dinov3__linear_probe_manifest.json",
+      "analysis_artifact_paths": {
+        "q2_metrics": "outputs/results/experiments/fine_tuning_primary_20260327/q2_metrics_analysis.json",
+        "q2_delta_iou": "outputs/results/experiments/fine_tuning_primary_20260327/q2_delta_iou_analysis.json"
+      },
+      "run_scope": "primary",
+      "training_git_commit_sha": "46e1d75642c28b9edda6125b68f41535ec6e46f0",
+      "analysis_git_commit_sha": "1ef7d6184a6b5c1beed3c02d6e631f16b12dec73"
+    },
+    "fine_tuning_primary_20260327__mae__linear_probe": {
+      "run_id": "fine_tuning_primary_20260327__mae__linear_probe",
+      "experiment_id": "fine_tuning_primary_20260327",
+      "model": "mae",
+      "strategy": "linear_probe",
+      "split_id": "fine_tuning_primary_20260327__primary__seed42",
+      "checkpoint_path": "outputs/checkpoints/fine_tuning_primary_20260327/mae_linear_probe_finetuned.pt",
+      "selected_epoch": 2,
+      "selection_metric": "classification_validation_accuracy",
+      "checkpoint_selection_split": "random_stratified_excluding_annotated_eval",
+      "best_val_score": 0.4983642311886587,
+      "manifest_path": "outputs/results/experiments/fine_tuning_primary_20260327/manifests/fine_tuning_primary_20260327__mae__linear_probe_manifest.json",
+      "analysis_artifact_paths": {
+        "q2_metrics": "outputs/results/experiments/fine_tuning_primary_20260327/q2_metrics_analysis.json",
+        "q2_delta_iou": "outputs/results/experiments/fine_tuning_primary_20260327/q2_delta_iou_analysis.json"
+      },
+      "run_scope": "primary",
+      "training_git_commit_sha": "46e1d75642c28b9edda6125b68f41535ec6e46f0",
+      "analysis_git_commit_sha": "1ef7d6184a6b5c1beed3c02d6e631f16b12dec73"
+    },
+    "fine_tuning_primary_20260327__siglip__linear_probe": {
+      "run_id": "fine_tuning_primary_20260327__siglip__linear_probe",
+      "experiment_id": "fine_tuning_primary_20260327",
+      "model": "siglip",
+      "strategy": "linear_probe",
+      "split_id": "fine_tuning_primary_20260327__primary__seed42",
+      "checkpoint_path": "outputs/checkpoints/fine_tuning_primary_20260327/siglip_linear_probe_finetuned.pt",
+      "selected_epoch": 3,
+      "selection_metric": "classification_validation_accuracy",
+      "checkpoint_selection_split": "random_stratified_excluding_annotated_eval",
+      "best_val_score": 0.6706652126499455,
+      "manifest_path": "outputs/results/experiments/fine_tuning_primary_20260327/manifests/fine_tuning_primary_20260327__siglip__linear_probe_manifest.json",
+      "analysis_artifact_paths": {
+        "q2_metrics": "outputs/results/experiments/fine_tuning_primary_20260327/q2_metrics_analysis.json",
+        "q2_delta_iou": "outputs/results/experiments/fine_tuning_primary_20260327/q2_delta_iou_analysis.json"
+      },
+      "run_scope": "primary",
+      "training_git_commit_sha": "46e1d75642c28b9edda6125b68f41535ec6e46f0",
+      "analysis_git_commit_sha": "1ef7d6184a6b5c1beed3c02d6e631f16b12dec73"
+    },
+    "fine_tuning_primary_20260327__siglip2__linear_probe": {
+      "run_id": "fine_tuning_primary_20260327__siglip2__linear_probe",
+      "experiment_id": "fine_tuning_primary_20260327",
+      "model": "siglip2",
+      "strategy": "linear_probe",
+      "split_id": "fine_tuning_primary_20260327__primary__seed42",
+      "checkpoint_path": "outputs/checkpoints/fine_tuning_primary_20260327/siglip2_linear_probe_finetuned.pt",
+      "selected_epoch": 3,
+      "selection_metric": "classification_validation_accuracy",
+      "checkpoint_selection_split": "random_stratified_excluding_annotated_eval",
+      "best_val_score": 0.6630316248636859,
+      "manifest_path": "outputs/results/experiments/fine_tuning_primary_20260327/manifests/fine_tuning_primary_20260327__siglip2__linear_probe_manifest.json",
+      "analysis_artifact_paths": {
+        "q2_metrics": "outputs/results/experiments/fine_tuning_primary_20260327/q2_metrics_analysis.json",
+        "q2_delta_iou": "outputs/results/experiments/fine_tuning_primary_20260327/q2_delta_iou_analysis.json"
+      },
+      "run_scope": "primary",
+      "training_git_commit_sha": "46e1d75642c28b9edda6125b68f41535ec6e46f0",
+      "analysis_git_commit_sha": "1ef7d6184a6b5c1beed3c02d6e631f16b12dec73"
+    },
+    "fine_tuning_primary_20260327__clip__lora": {
+      "run_id": "fine_tuning_primary_20260327__clip__lora",
+      "experiment_id": "fine_tuning_primary_20260327",
+      "model": "clip",
+      "strategy": "lora",
+      "split_id": "fine_tuning_primary_20260327__primary__seed42",
+      "checkpoint_path": "outputs/checkpoints/fine_tuning_primary_20260327/clip_lora_finetuned.pt",
+      "selected_epoch": 3,
+      "selection_metric": "classification_validation_accuracy",
+      "checkpoint_selection_split": "random_stratified_excluding_annotated_eval",
+      "best_val_score": 0.707742639040349,
+      "manifest_path": "outputs/results/experiments/fine_tuning_primary_20260327/manifests/fine_tuning_primary_20260327__clip__lora_manifest.json",
+      "analysis_artifact_paths": {
+        "q2_metrics": "outputs/results/experiments/fine_tuning_primary_20260327/q2_metrics_analysis.json",
+        "q2_delta_iou": "outputs/results/experiments/fine_tuning_primary_20260327/q2_delta_iou_analysis.json"
+      },
+      "run_scope": "primary",
+      "training_git_commit_sha": "46e1d75642c28b9edda6125b68f41535ec6e46f0",
+      "analysis_git_commit_sha": "1ef7d6184a6b5c1beed3c02d6e631f16b12dec73"
+    },
+    "fine_tuning_primary_20260327__dinov2__lora": {
+      "run_id": "fine_tuning_primary_20260327__dinov2__lora",
+      "experiment_id": "fine_tuning_primary_20260327",
+      "model": "dinov2",
+      "strategy": "lora",
+      "split_id": "fine_tuning_primary_20260327__primary__seed42",
+      "checkpoint_path": "outputs/checkpoints/fine_tuning_primary_20260327/dinov2_lora_finetuned.pt",
+      "selected_epoch": 2,
+      "selection_metric": "classification_validation_accuracy",
+      "checkpoint_selection_split": "random_stratified_excluding_annotated_eval",
+      "best_val_score": 0.7644492911668485,
+      "manifest_path": "outputs/results/experiments/fine_tuning_primary_20260327/manifests/fine_tuning_primary_20260327__dinov2__lora_manifest.json",
+      "analysis_artifact_paths": {
+        "q2_metrics": "outputs/results/experiments/fine_tuning_primary_20260327/q2_metrics_analysis.json",
+        "q2_delta_iou": "outputs/results/experiments/fine_tuning_primary_20260327/q2_delta_iou_analysis.json"
+      },
+      "run_scope": "primary",
+      "training_git_commit_sha": "46e1d75642c28b9edda6125b68f41535ec6e46f0",
+      "analysis_git_commit_sha": "1ef7d6184a6b5c1beed3c02d6e631f16b12dec73"
+    },
+    "fine_tuning_primary_20260327__dinov3__lora": {
+      "run_id": "fine_tuning_primary_20260327__dinov3__lora",
+      "experiment_id": "fine_tuning_primary_20260327",
+      "model": "dinov3",
+      "strategy": "lora",
+      "split_id": "fine_tuning_primary_20260327__primary__seed42",
+      "checkpoint_path": "outputs/checkpoints/fine_tuning_primary_20260327/dinov3_lora_finetuned.pt",
+      "selected_epoch": 3,
+      "selection_metric": "classification_validation_accuracy",
+      "checkpoint_selection_split": "random_stratified_excluding_annotated_eval",
+      "best_val_score": 0.7470010905125409,
+      "manifest_path": "outputs/results/experiments/fine_tuning_primary_20260327/manifests/fine_tuning_primary_20260327__dinov3__lora_manifest.json",
+      "analysis_artifact_paths": {
+        "q2_metrics": "outputs/results/experiments/fine_tuning_primary_20260327/q2_metrics_analysis.json",
+        "q2_delta_iou": "outputs/results/experiments/fine_tuning_primary_20260327/q2_delta_iou_analysis.json"
+      },
+      "run_scope": "primary",
+      "training_git_commit_sha": "46e1d75642c28b9edda6125b68f41535ec6e46f0",
+      "analysis_git_commit_sha": "1ef7d6184a6b5c1beed3c02d6e631f16b12dec73"
+    },
+    "fine_tuning_primary_20260327__mae__lora": {
+      "run_id": "fine_tuning_primary_20260327__mae__lora",
+      "experiment_id": "fine_tuning_primary_20260327",
+      "model": "mae",
+      "strategy": "lora",
+      "split_id": "fine_tuning_primary_20260327__primary__seed42",
+      "checkpoint_path": "outputs/checkpoints/fine_tuning_primary_20260327/mae_lora_finetuned.pt",
+      "selected_epoch": 3,
+      "selection_metric": "classification_validation_accuracy",
+      "checkpoint_selection_split": "random_stratified_excluding_annotated_eval",
+      "best_val_score": 0.579062159214831,
+      "manifest_path": "outputs/results/experiments/fine_tuning_primary_20260327/manifests/fine_tuning_primary_20260327__mae__lora_manifest.json",
+      "analysis_artifact_paths": {
+        "q2_metrics": "outputs/results/experiments/fine_tuning_primary_20260327/q2_metrics_analysis.json",
+        "q2_delta_iou": "outputs/results/experiments/fine_tuning_primary_20260327/q2_delta_iou_analysis.json"
+      },
+      "run_scope": "primary",
+      "training_git_commit_sha": "46e1d75642c28b9edda6125b68f41535ec6e46f0",
+      "analysis_git_commit_sha": "1ef7d6184a6b5c1beed3c02d6e631f16b12dec73"
+    },
+    "fine_tuning_primary_20260327__siglip__lora": {
+      "run_id": "fine_tuning_primary_20260327__siglip__lora",
+      "experiment_id": "fine_tuning_primary_20260327",
+      "model": "siglip",
+      "strategy": "lora",
+      "split_id": "fine_tuning_primary_20260327__primary__seed42",
+      "checkpoint_path": "outputs/checkpoints/fine_tuning_primary_20260327/siglip_lora_finetuned.pt",
+      "selected_epoch": 2,
+      "selection_metric": "classification_validation_accuracy",
+      "checkpoint_selection_split": "random_stratified_excluding_annotated_eval",
+      "best_val_score": 0.693565976008724,
+      "manifest_path": "outputs/results/experiments/fine_tuning_primary_20260327/manifests/fine_tuning_primary_20260327__siglip__lora_manifest.json",
+      "analysis_artifact_paths": {
+        "q2_metrics": "outputs/results/experiments/fine_tuning_primary_20260327/q2_metrics_analysis.json",
+        "q2_delta_iou": "outputs/results/experiments/fine_tuning_primary_20260327/q2_delta_iou_analysis.json"
+      },
+      "run_scope": "primary",
+      "training_git_commit_sha": "46e1d75642c28b9edda6125b68f41535ec6e46f0",
+      "analysis_git_commit_sha": "1ef7d6184a6b5c1beed3c02d6e631f16b12dec73"
+    },
+    "fine_tuning_primary_20260327__siglip2__lora": {
+      "run_id": "fine_tuning_primary_20260327__siglip2__lora",
+      "experiment_id": "fine_tuning_primary_20260327",
+      "model": "siglip2",
+      "strategy": "lora",
+      "split_id": "fine_tuning_primary_20260327__primary__seed42",
+      "checkpoint_path": "outputs/checkpoints/fine_tuning_primary_20260327/siglip2_lora_finetuned.pt",
+      "selected_epoch": 3,
+      "selection_metric": "classification_validation_accuracy",
+      "checkpoint_selection_split": "random_stratified_excluding_annotated_eval",
+      "best_val_score": 0.6924754634678298,
+      "manifest_path": "outputs/results/experiments/fine_tuning_primary_20260327/manifests/fine_tuning_primary_20260327__siglip2__lora_manifest.json",
+      "analysis_artifact_paths": {
+        "q2_metrics": "outputs/results/experiments/fine_tuning_primary_20260327/q2_metrics_analysis.json",
+        "q2_delta_iou": "outputs/results/experiments/fine_tuning_primary_20260327/q2_delta_iou_analysis.json"
+      },
+      "run_scope": "primary",
+      "training_git_commit_sha": "46e1d75642c28b9edda6125b68f41535ec6e46f0",
+      "analysis_git_commit_sha": "1ef7d6184a6b5c1beed3c02d6e631f16b12dec73"
+    },
+    "fine_tuning_primary_20260327__clip__full": {
+      "run_id": "fine_tuning_primary_20260327__clip__full",
+      "experiment_id": "fine_tuning_primary_20260327",
+      "model": "clip",
+      "strategy": "full",
+      "split_id": "fine_tuning_primary_20260327__primary__seed42",
+      "checkpoint_path": "outputs/checkpoints/fine_tuning_primary_20260327/clip_full_finetuned.pt",
+      "selected_epoch": 3,
+      "selection_metric": "classification_validation_accuracy",
+      "checkpoint_selection_split": "random_stratified_excluding_annotated_eval",
+      "best_val_score": 0.7339149400218102,
+      "manifest_path": "outputs/results/experiments/fine_tuning_primary_20260327/manifests/fine_tuning_primary_20260327__clip__full_manifest.json",
+      "analysis_artifact_paths": {
+        "q2_metrics": "outputs/results/experiments/fine_tuning_primary_20260327/q2_metrics_analysis.json",
+        "q2_delta_iou": "outputs/results/experiments/fine_tuning_primary_20260327/q2_delta_iou_analysis.json"
+      },
+      "run_scope": "primary",
+      "training_git_commit_sha": "46e1d75642c28b9edda6125b68f41535ec6e46f0",
+      "analysis_git_commit_sha": "1ef7d6184a6b5c1beed3c02d6e631f16b12dec73"
+    },
+    "fine_tuning_primary_20260327__dinov2__full": {
+      "run_id": "fine_tuning_primary_20260327__dinov2__full",
+      "experiment_id": "fine_tuning_primary_20260327",
+      "model": "dinov2",
+      "strategy": "full",
+      "split_id": "fine_tuning_primary_20260327__primary__seed42",
+      "checkpoint_path": "outputs/checkpoints/fine_tuning_primary_20260327/dinov2_full_finetuned.pt",
+      "selected_epoch": 3,
+      "selection_metric": "classification_validation_accuracy",
+      "checkpoint_selection_split": "random_stratified_excluding_annotated_eval",
+      "best_val_score": 0.7753544165757906,
+      "manifest_path": "outputs/results/experiments/fine_tuning_primary_20260327/manifests/fine_tuning_primary_20260327__dinov2__full_manifest.json",
+      "analysis_artifact_paths": {
+        "q2_metrics": "outputs/results/experiments/fine_tuning_primary_20260327/q2_metrics_analysis.json",
+        "q2_delta_iou": "outputs/results/experiments/fine_tuning_primary_20260327/q2_delta_iou_analysis.json"
+      },
+      "run_scope": "primary",
+      "training_git_commit_sha": "46e1d75642c28b9edda6125b68f41535ec6e46f0",
+      "analysis_git_commit_sha": "1ef7d6184a6b5c1beed3c02d6e631f16b12dec73"
+    },
+    "fine_tuning_primary_20260327__dinov3__full": {
+      "run_id": "fine_tuning_primary_20260327__dinov3__full",
+      "experiment_id": "fine_tuning_primary_20260327",
+      "model": "dinov3",
+      "strategy": "full",
+      "split_id": "fine_tuning_primary_20260327__primary__seed42",
+      "checkpoint_path": "outputs/checkpoints/fine_tuning_primary_20260327/dinov3_full_finetuned.pt",
+      "selected_epoch": 3,
+      "selection_metric": "classification_validation_accuracy",
+      "checkpoint_selection_split": "random_stratified_excluding_annotated_eval",
+      "best_val_score": 0.7470010905125409,
+      "manifest_path": "outputs/results/experiments/fine_tuning_primary_20260327/manifests/fine_tuning_primary_20260327__dinov3__full_manifest.json",
+      "analysis_artifact_paths": {
+        "q2_metrics": "outputs/results/experiments/fine_tuning_primary_20260327/q2_metrics_analysis.json",
+        "q2_delta_iou": "outputs/results/experiments/fine_tuning_primary_20260327/q2_delta_iou_analysis.json"
+      },
+      "run_scope": "primary",
+      "training_git_commit_sha": "46e1d75642c28b9edda6125b68f41535ec6e46f0",
+      "analysis_git_commit_sha": "1ef7d6184a6b5c1beed3c02d6e631f16b12dec73"
+    },
+    "fine_tuning_primary_20260327__mae__full": {
+      "run_id": "fine_tuning_primary_20260327__mae__full",
+      "experiment_id": "fine_tuning_primary_20260327",
+      "model": "mae",
+      "strategy": "full",
+      "split_id": "fine_tuning_primary_20260327__primary__seed42",
+      "checkpoint_path": "outputs/checkpoints/fine_tuning_primary_20260327/mae_full_finetuned.pt",
+      "selected_epoch": 3,
+      "selection_metric": "classification_validation_accuracy",
+      "checkpoint_selection_split": "random_stratified_excluding_annotated_eval",
+      "best_val_score": 0.6150490730643402,
+      "manifest_path": "outputs/results/experiments/fine_tuning_primary_20260327/manifests/fine_tuning_primary_20260327__mae__full_manifest.json",
+      "analysis_artifact_paths": {
+        "q2_metrics": "outputs/results/experiments/fine_tuning_primary_20260327/q2_metrics_analysis.json",
+        "q2_delta_iou": "outputs/results/experiments/fine_tuning_primary_20260327/q2_delta_iou_analysis.json"
+      },
+      "run_scope": "primary",
+      "training_git_commit_sha": "46e1d75642c28b9edda6125b68f41535ec6e46f0",
+      "analysis_git_commit_sha": "1ef7d6184a6b5c1beed3c02d6e631f16b12dec73"
+    },
+    "fine_tuning_primary_20260327__siglip__full": {
+      "run_id": "fine_tuning_primary_20260327__siglip__full",
+      "experiment_id": "fine_tuning_primary_20260327",
+      "model": "siglip",
+      "strategy": "full",
+      "split_id": "fine_tuning_primary_20260327__primary__seed42",
+      "checkpoint_path": "outputs/checkpoints/fine_tuning_primary_20260327/siglip_full_finetuned.pt",
+      "selected_epoch": 3,
+      "selection_metric": "classification_validation_accuracy",
+      "checkpoint_selection_split": "random_stratified_excluding_annotated_eval",
+      "best_val_score": 0.7230098146128681,
+      "manifest_path": "outputs/results/experiments/fine_tuning_primary_20260327/manifests/fine_tuning_primary_20260327__siglip__full_manifest.json",
+      "analysis_artifact_paths": {
+        "q2_metrics": "outputs/results/experiments/fine_tuning_primary_20260327/q2_metrics_analysis.json",
+        "q2_delta_iou": "outputs/results/experiments/fine_tuning_primary_20260327/q2_delta_iou_analysis.json"
+      },
+      "run_scope": "primary",
+      "training_git_commit_sha": "46e1d75642c28b9edda6125b68f41535ec6e46f0",
+      "analysis_git_commit_sha": "1ef7d6184a6b5c1beed3c02d6e631f16b12dec73"
+    },
+    "fine_tuning_primary_20260327__siglip2__full": {
+      "run_id": "fine_tuning_primary_20260327__siglip2__full",
+      "experiment_id": "fine_tuning_primary_20260327",
+      "model": "siglip2",
+      "strategy": "full",
+      "split_id": "fine_tuning_primary_20260327__primary__seed42",
+      "checkpoint_path": "outputs/checkpoints/fine_tuning_primary_20260327/siglip2_full_finetuned.pt",
+      "selected_epoch": 3,
+      "selection_metric": "classification_validation_accuracy",
+      "checkpoint_selection_split": "random_stratified_excluding_annotated_eval",
+      "best_val_score": 0.7230098146128681,
+      "manifest_path": "outputs/results/experiments/fine_tuning_primary_20260327/manifests/fine_tuning_primary_20260327__siglip2__full_manifest.json",
+      "analysis_artifact_paths": {
+        "q2_metrics": "outputs/results/experiments/fine_tuning_primary_20260327/q2_metrics_analysis.json",
+        "q2_delta_iou": "outputs/results/experiments/fine_tuning_primary_20260327/q2_delta_iou_analysis.json"
+      },
+      "run_scope": "primary",
+      "training_git_commit_sha": "46e1d75642c28b9edda6125b68f41535ec6e46f0",
+      "analysis_git_commit_sha": "1ef7d6184a6b5c1beed3c02d6e631f16b12dec73"
+    }
+  },
+  "split_id": "fine_tuning_primary_20260327__primary__seed42",
+  "updated_at": "2026-03-27T23:44:47.750486+00:00"
+}

@@ -1,0 +1,14 @@
+{
+  "model": "siglip2",
+  "strategy": "lora",
+  "seed": 42,
+  "epochs": 3,
+  "checkpoint_path": "/Users/leongkaymei/Downloads/NUS/ssl_wikichurches/outputs/checkpoints/siglip2_lora_finetuned.pt",
+  "split": {
+    "train_samples": 4588,
+    "val_samples": 125,
+    "excluded_eval_samples": 125,
+    "val_split": 0.2,
+    "val_source": "annotated_eval"
+  }
+}

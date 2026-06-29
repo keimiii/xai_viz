@@ -1,0 +1,280 @@
+{
+  "results": [
+    {
+      "model_name": "clip",
+      "strategy_id": "full",
+      "metric": "iou",
+      "percentile": 90,
+      "aggregate_frozen_mean": 0.01810485567661629,
+      "aggregate_finetuned_mean": 0.07453609309466118,
+      "aggregate_delta": 0.056431237418044886,
+      "aggregate_cohens_d": 1.0051103650227327,
+      "aggregate_significant": true,
+      "per_style": {
+        "Romanesque": {
+          "n": 54,
+          "mean": 0.06637360558589124,
+          "std": 0.05366977075472221,
+          "ci_lower": 0.05238963334231446,
+          "ci_upper": 0.08134938416977251
+        },
+        "Gothic": {
+          "n": 49,
+          "mean": 0.07902150559894398,
+          "std": 0.055588077885511664,
+          "ci_lower": 0.06374655724512572,
+          "ci_upper": 0.09470030104635692
+        },
+        "Renaissance": {
+          "n": 22,
+          "mean": 0.0135084676898533,
+          "std": 0.03835256021225042,
+          "ci_lower": -0.002197660159891894,
+          "ci_upper": 0.02886983061633438
+        },
+        "Baroque": {
+          "n": 17,
+          "mean": 0.012753209404681982,
+          "std": 0.019922114873718713,
+          "ci_lower": 0.0036326917637578477,
+          "ci_upper": 0.022109094548040442
+        }
+      },
+      "kruskal_wallis": {
+        "statistic": 40.792233621428174,
+        "p_value": 7.2374881963434504e-09,
+        "significant": true
+      }
+    },
+    {
+      "model_name": "dinov2",
+      "strategy_id": "full",
+      "metric": "iou",
+      "percentile": 90,
+      "aggregate_frozen_mean": 0.08163480490040807,
+      "aggregate_finetuned_mean": 0.07582040044562138,
+      "aggregate_delta": -0.005814404454786689,
+      "aggregate_cohens_d": -0.1843475917605667,
+      "aggregate_significant": false,
+      "per_style": {
+        "Romanesque": {
+          "n": 54,
+          "mean": -0.01043320211634062,
+          "std": 0.0417652856220268,
+          "ci_lower": -0.02190358542558439,
+          "ci_upper": 0.0009684400731295108
+        },
+        "Gothic": {
+          "n": 49,
+          "mean": 0.0009192094436427599,
+          "std": 0.031640804418592405,
+          "ci_lower": -0.007693144616976776,
+          "ci_upper": 0.009387055654480104
+        },
+        "Renaissance": {
+          "n": 22,
+          "mean": -0.003537195732639288,
+          "std": 0.01500051178400572,
+          "ci_lower": -0.010045249128809018,
+          "ci_upper": 0.0024268179654872756
+        },
+        "Baroque": {
+          "n": 17,
+          "mean": -0.011494038413043821,
+          "std": 0.026550457038614868,
+          "ci_lower": -0.02427445160371757,
+          "ci_upper": 0.0007519057217064782
+        }
+      },
+      "kruskal_wallis": {
+        "statistic": 4.842460564831913,
+        "p_value": 0.18370316466649275,
+        "significant": false
+      }
+    },
+    {
+      "model_name": "dinov3",
+      "strategy_id": "full",
+      "metric": "iou",
+      "percentile": 90,
+      "aggregate_frozen_mean": 0.13273963625772614,
+      "aggregate_finetuned_mean": 0.13206339799905348,
+      "aggregate_delta": -0.0006762382586727223,
+      "aggregate_cohens_d": -0.01736118200558974,
+      "aggregate_significant": false,
+      "per_style": {
+        "Romanesque": {
+          "n": 54,
+          "mean": -0.0007996346573734429,
+          "std": 0.0433817948631385,
+          "ci_lower": -0.0121753365611162,
+          "ci_upper": 0.011257295222347752
+        },
+        "Gothic": {
+          "n": 49,
+          "mean": 0.006067272152156352,
+          "std": 0.042108652663970854,
+          "ci_lower": -0.005791219096515505,
+          "ci_upper": 0.017366127500831094
+        },
+        "Renaissance": {
+          "n": 22,
+          "mean": -0.004089847186659348,
+          "std": 0.03351257921367618,
+          "ci_lower": -0.017337699367202086,
+          "ci_upper": 0.009751249305011879
+        },
+        "Baroque": {
+          "n": 17,
+          "mean": -0.009268819738352993,
+          "std": 0.014995054829905863,
+          "ci_lower": -0.01583173862666473,
+          "ci_upper": -0.001991090020152394
+        }
+      },
+      "kruskal_wallis": {
+        "statistic": 5.889187962405972,
+        "p_value": 0.1171277107333248,
+        "significant": false
+      }
+    },
+    {
+      "model_name": "mae",
+      "strategy_id": "full",
+      "metric": "iou",
+      "percentile": 90,
+      "aggregate_frozen_mean": 0.07017869830049908,
+      "aggregate_finetuned_mean": 0.09875246049065371,
+      "aggregate_delta": 0.028573762190154627,
+      "aggregate_cohens_d": 0.4131307345192578,
+      "aggregate_significant": true,
+      "per_style": {
+        "Romanesque": {
+          "n": 54,
+          "mean": 0.00654657120093352,
+          "std": 0.05497634067969989,
+          "ci_lower": -0.008024535010052158,
+          "ci_upper": 0.021015678228701016
+        },
+        "Gothic": {
+          "n": 49,
+          "mean": 0.009263021547783972,
+          "std": 0.05357914538812482,
+          "ci_lower": -0.005868814473045564,
+          "ci_upper": 0.02411568132903432
+        },
+        "Renaissance": {
+          "n": 22,
+          "mean": 0.10828055276326877,
+          "std": 0.08279523109731186,
+          "ci_lower": 0.07568243704331064,
+          "ci_upper": 0.14356809379774135
+        },
+        "Baroque": {
+          "n": 17,
+          "mean": 0.04462016644207841,
+          "std": 0.05429166177006076,
+          "ci_lower": 0.02250128816138783,
+          "ci_upper": 0.07128700125947823
+        }
+      },
+      "kruskal_wallis": {
+        "statistic": 32.678850780016894,
+        "p_value": 3.7642505398984375e-07,
+        "significant": true
+      }
+    },
+    {
+      "model_name": "siglip",
+      "strategy_id": "full",
+      "metric": "iou",
+      "percentile": 90,
+      "aggregate_frozen_mean": 0.03640675253507944,
+      "aggregate_finetuned_mean": 0.0618445788201879,
+      "aggregate_delta": 0.02543782628510847,
+      "aggregate_cohens_d": 0.6035319177235253,
+      "aggregate_significant": true,
+      "per_style": {
+        "Romanesque": {
+          "n": 54,
+          "mean": 0.028818671556433428,
+          "std": 0.04420464382227797,
+          "ci_lower": 0.01742828195633145,
+          "ci_upper": 0.04103330890900557
+        },
+        "Gothic": {
+          "n": 49,
+          "mean": 0.03880624538760972,
+          "std": 0.04583566991880321,
+          "ci_lower": 0.02627868361663133,
+          "ci_upper": 0.05144906232290153
+        },
+        "Renaissance": {
+          "n": 22,
+          "mean": -0.006056756580158218,
+          "std": 0.02338558354654951,
+          "ci_lower": -0.015671573770513345,
+          "ci_upper": 0.0031046516589670094
+        },
+        "Baroque": {
+          "n": 17,
+          "mean": 0.005262436291430028,
+          "std": 0.017261193075180165,
+          "ci_lower": -0.001231587891465065,
+          "ci_upper": 0.014374580173607215
+        }
+      },
+      "kruskal_wallis": {
+        "statistic": 25.04113683877267,
+        "p_value": 1.5137702943288863e-05,
+        "significant": true
+      }
+    },
+    {
+      "model_name": "siglip2",
+      "strategy_id": "full",
+      "metric": "iou",
+      "percentile": 90,
+      "aggregate_frozen_mean": 0.022001974792709805,
+      "aggregate_finetuned_mean": 0.05188944965414403,
+      "aggregate_delta": 0.02988747486143423,
+      "aggregate_cohens_d": 0.7811648719695616,
+      "aggregate_significant": true,
+      "per_style": {
+        "Romanesque": {
+          "n": 54,
+          "mean": 0.03355576479984523,
+          "std": 0.037532676629217485,
+          "ci_lower": 0.02372723753527747,
+          "ci_upper": 0.04388463732047883
+        },
+        "Gothic": {
+          "n": 49,
+          "mean": 0.044271649769402344,
+          "std": 0.03975943268354299,
+          "ci_lower": 0.03385776439166796,
+          "ci_upper": 0.05543820139101852
+        },
+        "Renaissance": {
+          "n": 22,
+          "mean": 0.006839810069053515,
+          "std": 0.0204410071473059,
+          "ci_lower": -0.0014219958711180584,
+          "ci_upper": 0.015162498703229273
+        },
+        "Baroque": {
+          "n": 17,
+          "mean": 0.007368444752603822,
+          "std": 0.02717708348484323,
+          "ci_lower": -0.0014825050865809582,
+          "ci_upper": 0.02166589046730649
+        }
+      },
+      "kruskal_wallis": {
+        "statistic": 32.100441938921975,
+        "p_value": 4.98448536076822e-07,
+        "significant": true
+      }
+    }
+  ]
+}

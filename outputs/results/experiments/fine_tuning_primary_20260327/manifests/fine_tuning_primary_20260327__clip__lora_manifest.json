@@ -1,0 +1,25 @@
+{
+  "run_id": "fine_tuning_primary_20260327__clip__lora",
+  "experiment_id": "fine_tuning_primary_20260327",
+  "run_scope": "primary",
+  "model": "clip",
+  "strategy": "lora",
+  "split_id": "fine_tuning_primary_20260327__primary__seed42",
+  "seed": 42,
+  "epochs": 3,
+  "checkpoint_path": "outputs/checkpoints/fine_tuning_primary_20260327/clip_lora_finetuned.pt",
+  "manifest_path": "outputs/results/experiments/fine_tuning_primary_20260327/manifests/fine_tuning_primary_20260327__clip__lora_manifest.json",
+  "split_artifact_path": "outputs/results/experiments/fine_tuning_primary_20260327/splits/fine_tuning_primary_20260327__primary__seed42.json",
+  "checkpoint_selection_metric": "classification_validation_accuracy",
+  "checkpoint_selection_split": "random_stratified_excluding_annotated_eval",
+  "selected_epoch": 3,
+  "best_val_score": 0.707742639040349,
+  "split": {
+    "train_samples": 3671,
+    "val_samples": 917,
+    "excluded_eval_samples": 139,
+    "val_split": 0.2,
+    "val_source": "random_stratified_excluding_annotated_eval"
+  },
+  "training_git_commit_sha": "46e1d75642c28b9edda6125b68f41535ec6e46f0"
+}

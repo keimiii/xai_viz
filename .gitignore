@@ -1,0 +1,88 @@
+# macOS
+.DS_Store
+
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Tool caches
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+
+# Coverage reports
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv
+
+# Dataset files
+dataset/
+
+# Runtime outputs (large binary artifacts only)
+outputs/cache/
+outputs/checkpoints/
+
+# Experiment outputs (but allow scripts and configs)
+experiments/outputs/
+experiments/results/
+experiments/logs/
+
+.playwright-mcp
+
+# Node.js (pptxgenjs for slide generation)
+experiments/scripts/node_modules/
+experiments/scripts/package*.json
+
+# Task files
+tasks/
+
+# Local agent/tool detritus
+.claude/settings.local.json
+.claude/skills/pptx/
+.claude/skills/skill-creator/
+
+# Beads runtime files; keep tracker JSONL/config tracked
+.beads/*.lock
+.beads/daemon*
+.beads/.local_version
+.beads/last-touched
+.beads/push-state.json
+.beads/backup/
+.beads/dolt/
+.beads/embeddeddolt/
+.beads/*.db*
+.beads/ephemeral.sqlite3*
+
+# Generated slide artifacts
+outputs/slides/
+
+# Local binary/data scratch files
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+*.db-wal
+*.db-shm
+*.sqlite-journal
+*.sqlite-wal
+*.sqlite-shm
+*.sqlite3-journal
+*.sqlite3-wal
+*.sqlite3-shm
+*.tmp
+*.log
+*.log.gz
+
+# All agentic tooling config files
+.codex/
+.claude/
+.beads/
+AGENTS.md
+CLAUDE.md
+docs/

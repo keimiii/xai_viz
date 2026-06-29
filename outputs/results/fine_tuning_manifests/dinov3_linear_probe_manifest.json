@@ -1,0 +1,14 @@
+{
+  "model": "dinov3",
+  "strategy": "linear_probe",
+  "seed": 42,
+  "epochs": 3,
+  "checkpoint_path": "/Users/desmondchoy/Projects/ssl_wikichurches/outputs/checkpoints/dinov3_linear_probe_finetuned.pt",
+  "split": {
+    "train_samples": 4588,
+    "val_samples": 125,
+    "excluded_eval_samples": 125,
+    "val_split": 0.2,
+    "val_source": "annotated_eval"
+  }
+}

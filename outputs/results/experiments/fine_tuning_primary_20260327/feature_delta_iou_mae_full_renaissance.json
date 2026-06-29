@@ -1,0 +1,103 @@
+{
+  "rows": [
+    {
+      "feature_label": 97,
+      "feature_name": "Triangular Pediment",
+      "bbox_count": 19,
+      "image_count": 19,
+      "frozen_mean_iou": 0.03604314103722572,
+      "finetuned_mean_iou": 0.11605280737991591,
+      "delta_iou": 0.08000966634269019
+    },
+    {
+      "feature_label": 36,
+      "feature_name": "Cranked Cornice",
+      "bbox_count": 2,
+      "image_count": 2,
+      "frozen_mean_iou": 0.00450489204376936,
+      "finetuned_mean_iou": 0.06677651802994412,
+      "delta_iou": 0.062271625986174764
+    },
+    {
+      "feature_label": 18,
+      "feature_name": "Broken Pediment",
+      "bbox_count": 7,
+      "image_count": 7,
+      "frozen_mean_iou": 0.005369008984416723,
+      "finetuned_mean_iou": 0.059893751189031584,
+      "delta_iou": 0.05452474220461486
+    },
+    {
+      "feature_label": 100,
+      "feature_name": "Volute",
+      "bbox_count": 4,
+      "image_count": 4,
+      "frozen_mean_iou": 0.008669935166835785,
+      "finetuned_mean_iou": 0.05159853855576155,
+      "delta_iou": 0.04292860338892576
+    },
+    {
+      "feature_label": 88,
+      "feature_name": "Segmental Pediment",
+      "bbox_count": 7,
+      "image_count": 7,
+      "frozen_mean_iou": 0.012553196400403976,
+      "finetuned_mean_iou": 0.05427612236480561,
+      "delta_iou": 0.041722925964401636
+    },
+    {
+      "feature_label": 87,
+      "feature_name": "Segmental Arch",
+      "bbox_count": 5,
+      "image_count": 5,
+      "frozen_mean_iou": 0.008743616752326488,
+      "finetuned_mean_iou": 0.02985598538471399,
+      "delta_iou": 0.021112368632387503
+    },
+    {
+      "feature_label": 74,
+      "feature_name": "Projecting Cornice",
+      "bbox_count": 6,
+      "image_count": 6,
+      "frozen_mean_iou": 0.035550523549318314,
+      "finetuned_mean_iou": 0.04849430405762773,
+      "delta_iou": 0.012943780508309417
+    },
+    {
+      "feature_label": 24,
+      "feature_name": "Column",
+      "bbox_count": 7,
+      "image_count": 7,
+      "frozen_mean_iou": 0.0035856522154062986,
+      "finetuned_mean_iou": 0.015893773768160174,
+      "delta_iou": 0.012308121552753876
+    },
+    {
+      "feature_label": 80,
+      "feature_name": "Round Arch Niche",
+      "bbox_count": 7,
+      "image_count": 7,
+      "frozen_mean_iou": 0.0,
+      "finetuned_mean_iou": 0.008256710821691876,
+      "delta_iou": 0.008256710821691876
+    },
+    {
+      "feature_label": 64,
+      "feature_name": "Pilaster",
+      "bbox_count": 15,
+      "image_count": 15,
+      "frozen_mean_iou": 0.023178858682513237,
+      "finetuned_mean_iou": 0.011072621519893494,
+      "delta_iou": -0.012106237162619743
+    },
+    {
+      "feature_label": 7,
+      "feature_name": "Belt Course",
+      "bbox_count": 9,
+      "image_count": 9,
+      "frozen_mean_iou": 0.03106381744146347,
+      "finetuned_mean_iou": 0.015477847828424965,
+      "delta_iou": -0.015585969613038505
+    }
+  ]
+}

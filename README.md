@@ -30,13 +30,13 @@ uv sync
 Download precomputed artifacts (dataset, cache, checkpoints) from the [Google Drive artifact folder](https://drive.google.com/drive/folders/1pT8VrK6d9h-sZzAr6qhPxvNrVrRi-8Cd?usp=sharing), then copy into the repo root:
 
 ```bash
-rsync -av dataset outputs /path/to/ssl_wikichurches/
+rsync -av dataset outputs /path/to/xai_viz/
 ```
 
 Expected structure after copying:
 
 ```
-ssl_wikichurches/
+xai_viz/
 ├── dataset/
 └── outputs/
     ├── cache/
@@ -114,7 +114,7 @@ uv run python experiments/scripts/analyze_q2_metrics.py \
 ## Repository Layout
 
 ```
-ssl_wikichurches/
+xai_viz/
 ├── app/                 # FastAPI backend, React frontend, precompute scripts
 ├── dataset/             # WikiChurches data (not tracked, download separately)
 ├── experiments/         # Fine-tuning and analysis scripts

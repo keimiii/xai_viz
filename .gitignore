@@ -83,6 +83,9 @@ outputs/slides/
 .codex/
 .claude/
 .beads/
+.agents/
 AGENTS.md
 CLAUDE.md
+
 docs/
+notebooks/
